@@ -15,16 +15,36 @@ This project demonstrates data preprocessing and machine learning model building
 	```
 3. Run the main script:
 	```bash
-	python data_preprocess.py
+	python model_trained.py
 	```
-4. Review the output in the terminal for model performance and feature importance.
-OR
+4. Review the output in the terminal for model performance and feature importance. \
+OR \
 Directly check the existing result output stored in file `model_output.txt`.
 
 
 ## Model Summary
 - **Logistic Regression**: Used after dropping columns with many missing values and normalizing features. Provides interpretable coefficients for feature importance.
 - **Random Forest**: Trained on the original data (with missing values). Handles missing data natively and provides feature importance based on tree splits.
+
+Based on the model results, here are 10 key insights about your diabetes prediction models:
+
+## Model Performance Comparison
+
+1. **Random Forest is slightly better overall.** Random Forest achieved 78.5% accuracy compared to Logistic Regression's 77.2%, making it the stronger performer for this dataset.
+2. **Both models have excellent discrimination ability.** The ROC-AUC scores (0.83 for Logistic Regression, 0.82 for Random Forest) indicate both models are very good at distinguishing between diabetic and non-diabetic patients, regardless of the classification threshold chosen.
+3. **Conservative on positive predictions.** Both models have higher precision (~70%) than recall (~59-63%), meaning when they predict diabetes, they're usually correct, but they miss about 37-40% of actual diabetes cases.
+
+## Feature Importance Insights
+
+4. **Glucose is the dominant predictor.** Both models rank Glucose as the most important feature, with Logistic Regression giving it a coefficient of 1.12 and Random Forest assigning it 26% importance—confirming our earlier discussion about glucose being the primary diabetes indicator.
+5. **Insulin matters more in ensemble models.** Random Forest ranks Insulin as the second most important feature (15.7%), while Logistic Regression places it last (0.13). This suggests complex interactions with Insulin that tree-based models capture better.
+6. **BMI and Age are consistently important.** Both models rank BMI and Age in the top 4-5 features, aligning with medical knowledge that obesity and aging are major diabetes risk factors.
+
+## Classification Behavior
+
+7. **The model is cautious about false alarms.** With only 7 false positives (incorrectly predicting diabetes), the Random Forest avoids unnecessarily alarming healthy patients.
+8. **Missing real cases is the bigger problem.** The 10 false negatives mean the model fails to identify 37% of diabetic patients (10 out of 27 total). This is reflected in the recall score of 63%.
+9. **Class imbalance is evident.** The confusion matrix shows 52 non-diabetic vs. 27 diabetic cases in your test set, suggesting the model sees far more negative examples, which may bias it toward predicting "no diabetes".
 
 ### Research Findings from dataset
 
