@@ -1,10 +1,35 @@
 
+
+# Diabetes Prediction with Scikit-learn
+
+This project demonstrates data preprocessing and machine learning model building for diabetes prediction using the Pima Indians Diabetes dataset. It includes:
+- Data cleaning and handling of biologically impossible values
+- Exploratory data analysis and feature importance
+- Training and evaluation of Logistic Regression and Random Forest models
+
+## Usage
+1. Place the dataset file (`kaggle_pimadiabetes.csv`) in the project directory.
+2. Install dependencies:
+	```bash
+	pip install -r requirements.txt
+	```
+3. Run the main script:
+	```bash
+	python data_preprocess.py
+	```
+4. Review the output in the terminal for model performance and feature importance.
+
 **Generate requirements.txt** \
 `pip freeze > requirements.txt`
 
+
 # Domain knowlege on Diabetes
- Research on this dataset highlights that Glucose and BMI are the strongest predictors for this classification.
-​
+Research on this dataset highlights that Glucose and BMI are the strongest predictors for this classification.
+
+
+## Model Summary
+- **Logistic Regression**: Used after dropping columns with many missing values and normalizing features. Provides interpretable coefficients for feature importance.
+- **Random Forest**: Trained on the original data (with missing values). Handles missing data natively and provides feature importance based on tree splits.
 
 ### Research Findings from dataset
 

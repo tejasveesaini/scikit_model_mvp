@@ -7,8 +7,6 @@ from sklearn.preprocessing import StandardScaler      # For feature normalizatio
 from sklearn.linear_model import LogisticRegression   # For logistic regression model
 from sklearn.ensemble import RandomForestClassifier   # For random forest model
 from sklearn.metrics import accuracy_score, precision_score, recall_score, roc_auc_score, confusion_matrix  # For model evaluation
-import matplotlib.pyplot as plt
-
 
 # Load the dataset from CSV into a pandas DataFrame
 # This dataset contains medical data for diabetes prediction
