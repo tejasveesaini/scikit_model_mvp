@@ -26,7 +26,7 @@ Directly check the existing result output stored in file `model_output.txt`.
 - **Logistic Regression**: Used after dropping columns with many missing values and normalizing features. Provides interpretable coefficients for feature importance.
 - **Random Forest**: Trained on the original data (with missing values). Handles missing data natively and provides feature importance based on tree splits.
 
-Based on the model results, here are 10 key insights about your diabetes prediction models:
+## Based on the model training and output results, here are 10 key insights:
 
 ## Model Performance Comparison
 
