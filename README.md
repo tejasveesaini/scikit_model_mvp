@@ -18,13 +18,8 @@ This project demonstrates data preprocessing and machine learning model building
 	python data_preprocess.py
 	```
 4. Review the output in the terminal for model performance and feature importance.
-
-**Generate requirements.txt** \
-`pip freeze > requirements.txt`
-
-
-# Domain knowlege on Diabetes
-Research on this dataset highlights that Glucose and BMI are the strongest predictors for this classification.
+OR
+Directly check the existing result output stored in file `model_output.txt`.
 
 
 ## Model Summary
