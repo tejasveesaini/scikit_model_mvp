@@ -1,6 +1,6 @@
 
 
-# Diabetes Prediction with Scikit-learn
+# Diabetes Prediction model with Scikit-learn
 
 This project demonstrates data preprocessing and machine learning model building for diabetes prediction using the Pima Indians Diabetes dataset. It includes:
 - Data cleaning and handling of biologically impossible values
